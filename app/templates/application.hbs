@@ -1,5 +1,20 @@
-{{!-- The following component displays Ember's default welcome message. --}}
-
-{{!-- Feel free to remove this! --}}
-
-{{outlet}}
+<div class="container">
+  <div class="menu">
+    {{#link-to 'index'}}
+      <h1>
+        <em>SciensaHotels</em>
+      </h1>
+    {{/link-to}}
+    <div class="links">
+      {{#link-to 'about'}}
+        Sobre nós
+      {{/link-to}}
+      {{#link-to 'contact'}}
+        Contato
+      {{/link-to}}
+    </div>
+  </div>
+  <div class="body">
+    {{outlet}}
+  </div>
+</div>
