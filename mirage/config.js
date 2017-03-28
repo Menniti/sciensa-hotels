@@ -49,4 +49,9 @@ export default function() {
       return { data: rentals };
     }
   });
+
+  // Encontra e retorna o rental fornecido do nosso rental list acima.
+  this.get('/rentals/:id', function (db, request) {
+    return { data: rentals.find((rental) => request.params.id === rental.id) };
+  });
 }
