@@ -7,4 +7,12 @@
   {{/link-to}}
 </div>
 
+{{#each model as |hotel|}}
+	<li>{{hotel.room}}</li>
+	<li>{{hotel.name}}</li>
+	<li>{{hotel.rates}}</li>
+	<li>{{hotel.rateToken}}</li>
+{{/each}}
+
+
 {{outlet}}
