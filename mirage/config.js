@@ -39,6 +39,7 @@ export default function() {
       }
     }];
 
+  
   this.get('/rentals', function(db, request) {
     if(request.queryParams.city !== undefined) {
       let filteredRentals = rentals.filter(function(i) {
@@ -49,7 +50,7 @@ export default function() {
       return { data: rentals };
     }
   });
-
+  
   // Encontra e retorna o rental fornecido do nosso rental list acima.
   this.get('/rentals/:id', function (db, request) {
     return { data: rentals.find((rental) => request.params.id === rental.id) };
